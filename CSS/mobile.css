@@ -1,0 +1,94 @@
+@media screen and (max-width: 450px) {
+    .nav{
+        flex-direction: column;
+    }
+    .nav .logo {
+        margin-right: 130px;
+        margin-bottom: 10px;
+    }
+    .nav ul {
+        gap: 0rem;
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .nav .icons {
+        position: relative;
+        right: 3%;
+        margin-block: 25px 12px;
+    }
+    .nav .logo img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+    /* HOME   */
+    .home {
+        text-align: center;
+        margin-top: 40px;
+    }
+    .home h3 {
+        text-align: center;
+        margin-top: 49px;
+        font-size: 3rem;
+    }
+    .home p {
+        margin-block: 10px;
+    }
+    /* ITEMS  */
+    #items {
+        text-align: center;
+    }
+    #items h1{
+        font-size: 3.5rem;
+        margin-block: 20px;
+    }
+    .h1-cont {
+        flex-wrap: wrap;
+    }
+    #items .card-1 {
+        margin-bottom: 20px;
+    }
+    /* SERVICES  */
+    #services .main {
+        font-size: 4rem;
+        margin-block: 20px;
+    }
+    #services .card-2 {
+        margin-inline: 70px;
+        margin-block-end: 45px;
+    }
+    /* CLIENTS   */
+    #clients .client1 {
+        margin-block: 3%;
+        width: fit-content;
+        margin-inline: 16px;
+    }
+    .client1 .comment {
+        margin: 6px;
+    }
+    /* MORE-ITEMS  */
+    #more-items .more-items-cont {
+        flex-wrap: wrap;
+    }
+    #more-items h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin-block: 2.5% 3%;
+    }
+    #more-items .card-3 {
+        width: 44%;
+        margin-bottom: 32px;
+    }
+    /* FOOTER  */
+    footer .footer {
+        width: 96%;
+    }
+    footer .social-icons {
+        width: 82%;
+    }
+
+}
+
+
+
+@media screen and (max-width: 450px) {}
