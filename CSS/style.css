@@ -1,398 +1,708 @@
 /* Dancing-Script font */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 /* font-family: "Dancing Script", cursive;
 
 /* JOST FONT */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 /* font-family: "Jost", serif;
 
 /* Utility Classes */
-:root{
-    --prim-color: white;
-    --sec-color: black;
-    --other-color: #D9CFCF;
-    --orange: orange;
+
+:root {
+  --prim-color: white;
+  --sec-color: black;
+  --other-color: #d9cfcf;
+  --orange: orange;
 }
-.flex{
-    display: flex;
-    align-items: center;
+.flex {
+  display: flex;
+  align-items: center;
 }
-*{
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-    font-family: "Jost", serif;
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Jost", serif;
 }
 /* NAVIGATION BAR LOGO */
-.nav{
-    width: 100%;
-    height: 80px;
-    justify-content: space-around;
-    color: var(--prim-color);
-    font-family: "Jost", serif;
-    background: #00000083;
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  justify-content: space-around;
+  color: var(--prim-color);
+  font-family: "Jost", serif;
+  background: #00000083;
 }
-.nav-cont{
-    max-width: 70%;
+.nav-cont {
+  max-width: 70%;
 }
-.nav .icons{
-    font-size: 2rem;
-    color: var(--orange);
-    gap: 50%;
+.nav .icons {
+  font-size: 2rem;
+  color: var(--orange);
+  justify-content: space-between;
+  width: 70px;
 }
-.nav .logo{
-    width: 32%;
+.nav .logo {
+  width: 32%;
 }
-.nav .logo img{
-    max-height: 17%;
-    max-width: 18%;
+.nav .logo img {
+  max-height: 17%;
+  max-width: 18%;
 }
-.nav .logo h3{
-    font-family: "Dancing Script", cursive;
-    font-weight: 700;
-    font-size: 2.2rem;
-    color: var(--orange);
+.nav .logo h3 {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: var(--orange);
 }
-.nav ul{
-    display: flex;
-    gap: 1rem;
+.hamburger{
+  display: none;
 }
-.nav ul li a{
-    padding: 5px 15px;
-    border-radius: 17px;
-    transition: .1s ease-in;
-    color: var(--prim-color);
+.nav ul {
+  display: flex;
+  gap: 1rem;
 }
-.nav ul li a:hover{
-    color: var(--sec-color);
-    background: var(--other-color);
+.nav ul li a {
+  padding: 5px 15px;
+  border-radius: 17px;
+  transition: 0.1s ease-in;
+  color: var(--prim-color);
 }
-.nav ul li a:focus-visible{
-    border: 2px solid var(--other-color);
+.nav ul li a:hover {
+  color: var(--sec-color);
+  background: var(--other-color);
 }
-.nav i:hover{
-    transform: rotateY(180deg);
-    color: var(--other-color);
-    cursor: pointer;
+.nav ul li a:focus-visible {
+  border: 2px solid var(--other-color);
 }
+.nav i:hover {
+  transform: rotateY(180deg);
+  color: var(--other-color);
+  cursor: pointer;
+}
+
+/* Mobile layout when nav is active */
+.nav.active {
+  flex-direction: column;
+  height: auto;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.nav.active .logo {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.nav.active ul {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav.active .icons {
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  
+}
+
+
 /* HOME SECTION */
-header{
-    flex-direction: column;
-    gap: 25%;
-    height: 70vh;
-    background: url(../images/bg2.jpg),no-repeat;
-    background-size: cover;
-    background-position: center;
-    z-index: -2;
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  height: 70vh;
+  background: url("../images/banner-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 100px;
 }
-.home{
-    max-width: 70%;
-    flex-direction: column;
-    font-family: "Jost", serif;
+.home {
+  max-width: 70%;
+  flex-direction: column;
+  font-family: "Jost", serif;
 }
-.home h3{
-    color: var(--prim-color);
-    font-size: 3.5rem;
-    font-weight: 500;
+.home h3 {
+  color: var(--prim-color);
+  font-size: 3.5rem;
+  font-weight: 500;
 }
-.home h3 span{
-    font-family: "Dancing Script", cursive;
-    font-weight: 700;
-    font-size: 5rem;
-    color: var(--orange);
+.home h3 span {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 5rem;
+  color: var(--orange);
 }
-.home p{
-    text-shadow: 5px 5px 15px black;
+.home p {
+  text-shadow: 5px 5px 15px black;
 }
-.home button{
-    border: none;
-    outline: none;
-    font-size: 1.3rem;
-    border-radius: 19px;
-    margin-block: 5% 10%; 
-    background: var(--orange);
-    padding: 10px 20px;
-    color: var(--prim-color);
-    transition: .3s ease-in;
+.home button {
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  border-radius: 19px;
+  margin-block: 5% 10%;
+  background: var(--orange);
+  padding: 10px 20px;
+  color: var(--prim-color);
+  transition: 0.3s ease-in;
 }
-.home button:hover{
-    transform: translateY(-10px);
-    color: var(--sec-color);
-    background: var(--other-color);
-    cursor: pointer;
+.home button:hover {
+  transform: translateY(-10px);
+  color: var(--sec-color);
+  background: var(--other-color);
+  cursor: pointer;
 }
 /* ITEMS SECTION  */
-#items{
-    flex-direction: column;
-    height: 110vh;
-    justify-content: space-around;
-    background: var(--orange);
+
+#items {
+  flex-direction: column;
+  height: 110vh;
+  justify-content: space-around;
+  background: var(--orange);
 }
-#items h1{
-    font-size: 5rem;
-    color: var(--prim-color);
-    font-family: "Dancing Script", cursive;   
+#items h1 {
+  font-size: 5rem;
+  color: var(--prim-color);
+  font-family: "Dancing Script", cursive;
 }
-.h1-cont{
-    width: 100%;
-    justify-content: space-evenly;
-    cursor: pointer;
-    flex-wrap: wrap;
+.h1-cont {
+  width: 100%;
+  justify-content: space-evenly;
+  cursor: pointer;
+  flex-wrap: wrap;
 }
-#items .card-1 i{
-    font-size: 2.5rem;
-    color: white;
-    background: orange;
-    padding: 3%;
-    border-radius: 12px;
-    opacity: 0;
-    transition: .2s ease-in;
+#items .card-1 i {
+  font-size: 2.5rem;
+  color: white;
+  background: orange;
+  padding: 3%;
+  border-radius: 12px;
+  opacity: 0;
+  transition: 0.2s ease-in;
 }
-#items .card-1:hover i{
-    opacity: 1;
+#items .card-1:hover i {
+  opacity: 1;
 }
-#items-cont a:hover{
-    transform: translateY(-100px);
+#items-cont a:hover {
+  transform: translateY(-100px);
 }
-#items .card-1{
-    width: 400px;
-    background: var(--other-color);
-    border: 6px solid var(--orange);
-    border-radius: 12px;
-    flex-direction: column;
-    justify-content: center;   
+#items .card-1 {
+  width: 400px;
+  background: var(--other-color);
+  border: 6px solid var(--orange);
+  border-radius: 12px;
+  flex-direction: column;
+  justify-content: center;
 }
-#items .card-img img{
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.37);
-    transition: .2s ease-in;
+#items .card-img img {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.37);
+  transition: 0.2s ease-in;
 }
-#items .card-img{
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
-    overflow: hidden;
+#items .card-img {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
 }
-#items .card-img img:hover{
-    transform: scale(1.15);
-} 
-#items .card-1 .des{
-    padding-inline: 10px;
-    text-align: center;
+#items .card-img img:hover {
+  transform: scale(1.15);
 }
-#items .card-1 .des h1{
-    font-size: 2.5rem;
-    margin-block: 5px;
+#items .card-1 .des {
+  padding-inline: 10px;
+  text-align: center;
+}
+#items .card-1 .des h1 {
+  font-size: 2.5rem;
+  margin-block: 5px;
 }
 /* SERVICES CONTAINER */
-#services{
-    justify-content: space-around;
-    flex-direction: column;
-    height: 90vh;
-    background: var(--other-color);
+
+#services {
+  justify-content: space-around;
+  height: auto;
+  background: var(--other-color);
 }
-.h-cont{
-    width: 100%;
-    justify-content: space-evenly;
-    cursor: pointer;
+.h-cont {
+  width: 100%;
+  justify-content: center;
+  cursor: pointer;
 }
-#services i{
-    font-size: 3rem;
-    color: #25D366;
-    background: white;
-    border-radius: 12px;
-    padding: 1%;
-    opacity: 0;
-    transition: 0.3s ease-in;
+#services i {
+  font-size: 3rem;
+  color: #25d366;
+  background: white;
+  border-radius: 12px;
+  padding: 1%;
+  opacity: 0;
+  transition: 0.3s ease-in;
 }
-#services .card-2:hover i{
-    opacity: 1;
+#services .card-2:hover i {
+  opacity: 1;
 }
-#services .main{
-    font-size: 5rem;
-    color: var(--sec-color);
-    font-family: "Dancing Script", cursive; 
+#services .main {
+  font-size: 5rem;
+  color: var(--sec-color);
+  font-family: "Dancing Script", cursive;
 }
-#services .card-2{
-    border: 4px solid orange;
-    width: 300px;
-    padding: 2%;
-    background: url(../images/services1.jpg) no-repeat, linear-gradient(rgba(0, 0, 0, 0.459),black);
-    background-position: center;
-    background-size: cover;
-    color: var(--prim-color);
-    transition: .2s ease-in;
+#services .card-2 {
+  border: 4px solid orange;
+  padding: 2%;
+  background: linear-gradient(rgba(0, 0, 0, 0.218), rgba(0, 0, 0, 0.777)),url(../images/services1.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--prim-color);
+  transition: 0.2s ease-in;
 }
-#services .card-2:hover{
-    transform: translateY(-10px);
-    box-shadow: 10px 10px 20px black;
+#services .card-2:hover {
+  transform: translateY(-10px);
+  box-shadow: 10px 10px 20px black;
 }
-#services .card-2 p, h1{
-    text-shadow: 4px 4px 5px grey;
+#services .card-2 p,
+h1 {
+  text-shadow: 7px 8px 5px grey;
 }
-#services .part-1{
-    background: url(../images/services2.png) no-repeat, linear-gradient(rgba(0, 0, 0, 0.459),black);
-    background-position: center;
-    background-size: cover;
+#services .part-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.218), rgba(0, 0, 0, 0.823)),url(../images/services2.png) no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.302), black);
+  background-position: center;
+  background-size: cover;
 }
-#services .part-2{
-    background: url(../images/services3.png) no-repeat;
-    background-position: center;
-    background-size: cover;
+#services .part-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.218), rgba(0, 0, 0, 0.777)),url(../images/services3.png) no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-#services .part-3{
-    background: url(../images/services4.jpg) no-repeat;
-    background-position: center;
-    background-size: cover;
+#services .part-3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.123), rgba(0, 0, 0, 0.506)),url(../images/services4.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-#services .card-2 h1{
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 600;       
+#services .card-2 h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
 }
-#services .card-2 p{
-    text-align: justify;
+#services .card-2 p {
+  text-align: justify;
 }
+
 /* CLIENTS SECTION  */
-#clients{
-    height: 95vh;
-    justify-content: space-around;
-    flex-direction: column;
-    background: url(../images/bg.jpg) no-repeat;
-    background-position: center;
-    background-size: cover;
+
+#clients {
+  height: auto;
+  justify-content: space-around;
+  flex-direction: column;
+  background: url(../images/bg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-#clients h3{
-    font-weight: 700;
-    font-size: 4.5rem;
-    font-family: "Dancing Script", cursive;
-    margin-block: 1%;
+.client-cont{
+  justify-content: center;
 }
-#clients .client1{
-    background: var(--other-color);
-    border-radius: 15px;
-    width: 65%;
-    margin-top: 1%;
+#clients h3 {
+  font-weight: 700;
+  font-size: 4.5rem;
+  font-family: "Dancing Script", cursive;
+  margin-block: 1%;
 }
-.client1 img{
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-left: 10px;
+#clients .client1 {
+  background: var(--other-color);
+  border-radius: 15px;
+  width: 65%;
+  margin-top: 1%;
 }
-.client1 .comment{
-    width: 90%;
-    margin: 20px;
+.client1 img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-left: 10px;
 }
-#clients .client1 .comment p{
-    text-align: justify;
+.client1 .comment {
+  width: 90%;
+  margin: 20px;
 }
-.client1 .name-star{
-    justify-content: space-between;
+#clients .client1 .comment p {
+  text-align: justify;
 }
-.client1 .name-star .rating i{
-    color: orange;
+.client1 .name-star {
+  justify-content: space-between;
 }
-#clients button{
-    padding: .3% 1%;
-    font-size: 1.3rem;
-    border-radius: 19px;
-    margin-block: 2% 5%; 
-    background: var(--orange);
-    padding: 10px 20px;
-    color: var(--prim-color);
-    transition: .3s ease-in;
-    border: none;
-    font-weight: 600;
+.client1 .name-star .rating i {
+  color: orange;
 }
-#clients button:hover{
-    cursor: pointer;
-    transform: translateY(-5px);
-    color: var(--sec-color);
-    background: transparent;
-    font-size: 1.8rem;
-    padding: 0%;
+#clients button {
+  padding: 0.3% 1%;
+  font-size: 1.3rem;
+  border-radius: 19px;
+  margin-block: 2% 5%;
+  background: var(--orange);
+  padding: 10px 20px;
+  color: var(--prim-color);
+  transition: 0.3s ease-in;
+  border: none;
+  font-weight: 600;
+}
+#clients button:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  color: var(--sec-color);
+  background: transparent;
+  font-size: 1.8rem;
+  padding: 0%;
 }
 /* MORE ITEMS SECTION  */
-#more-items{
-    height: 90vh;
-    flex-direction: column;
-    justify-content: center;
-    background: var(--other-color);
+
+#more-items {
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--other-color);
 }
-#more-items h2{
-    font-family: "Dancing Script", cursive;
-    font-size: 4.5rem;
-    margin-block: .5% 3%;
+#more-items h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 4.5rem;
+  margin-block: 0.5% 3%;
 }
-#more-items .more-items-cont{
-    justify-content: space-around;
+#more-items .more-items-cont {
+  justify-content: space-around;
 }
-#more-items .card-3{
-    flex-direction: column;
-    width: 20%;
-    background: var(--orange);
-    color: var(---color);
-    border-radius: 17px;
-    cursor: pointer;
+#more-items .card-3 {
+  flex-direction: column;
+  width: 20%;
+  background: var(--orange);
+  color: var(---color);
+  border-radius: 17px;
+  cursor: pointer;
 }
-#more-items .card-3 .card-3-img{
-    width: 100%;
-    height: 300px; 
-    overflow: hidden;
-} 
-.card-3-img img{
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    width: 100%;
-    height: 100%;
-    transition: 0.2s ease-in;
+#more-items .card-3 .card-3-img {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
 }
-.card-3-img{
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+.card-3-img img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s ease-in;
 }
-.card-3:hover .card-3-img img{
-    transform: scale(1.1);
+.card-3-img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
-#more-items .card-3 .price h3{
-    font-size: 2rem;
-    text-align: center;
+.card-3:hover .card-3-img img {
+  transform: scale(1.1);
 }
-.card-3 .price .main-h{
-    font-family: "Dancing Script", cursive;
+#more-items .card-3 .price h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+.card-3 .price .main-h {
+  font-family: "Dancing Script", cursive;
 }
 /* FOOTER  */
-footer{
-    height: 30vh;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background: #000;
+
+footer {
+  height: 30vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: #000;
 }
-footer .footer{
-    width: 40%;
-    justify-content: space-evenly;
-    color: rgba(255, 255, 255, 0.664);
-    text-decoration: underline;
+footer .footer {
+  width: 40%;
+  justify-content: space-evenly;
+  color: rgba(255, 255, 255, 0.664);
+  text-decoration: underline;
+  gap: 1.2rem;
 }
-footer .social-icons{
-    width: 30%;
-    justify-content: space-evenly;
-    color: rgba(255, 255, 255, 0.644);
-    font-size: 2.2rem;
+footer .social-icons {
+  justify-content: space-evenly;
+  color: rgba(255, 255, 255, 0.644);
+  font-size: 2.2rem;
+  gap: 1.2rem;
 }
-footer .social-icons i:hover{
-    transform: rotateY(180deg);
-    color: white;
+footer .social-icons i:hover {
+  transform: rotateY(180deg);
+  color: white;
 }
-footer p{
-    color: rgba(255, 255, 255, 0.562);
+footer p {
+  color: rgba(255, 255, 255, 0.562);
 }
 /* HTML  */
-html{
-    scroll-behavior: smooth;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* General Responsive Tweaks */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav,
+.nav-cont,
+.nav ul,
+.h1-cont,
+.h-cont,
+.more-items-cont,
+footer .footer,
+footer .social-icons {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Ensure elements adapt to all screens */
+#items .card-1,
+#services .card-2,
+#more-items .card-3,
+#clients .client1 {
+  width: 100%;
+  max-width: 350px;
+  margin: 10px;
+}
+
+/* Responsive headings */
+#items h1,
+#more-items h2,
+#services .main,
+#clients h3 {
+  text-align: center;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+/* Responsive text and button */
+.home h3 {
+  font-size: clamp(2rem, 6vw, 4rem);
+}
+
+.home h3 span {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+}
+
+.home button,
+#clients button {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  padding: 10px 20px;
+}
+
+/* ---------------- MEDIA QUERIES ---------------- */
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .nav {
+    height: auto;
+    padding-block: 20px 0;
+    justify-content: space-between;
+  }
+  .nav .logo {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav .icons {
+    margin-top: 2rem;
+  }
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--prim-color);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+  }
+  .nav ul,
+  .nav .icons {
+    display: none;
+  }
+  .nav.active ul,
+  .nav.active .icons {
+    display: flex;
+  }
+  header {
+    height: auto;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .home {
+    max-width: 90%;
+    text-align: center;
+    margin-top: 120px;
+  }
+
+  .home h3,
+  .home p,
+  .home button {
+    text-align: center;
+  }
+
+  #items {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .h1-cont {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  #services {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .h-cont {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #clients {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  #more-items {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  #more-items .card-3 {
+    width: 80%;
+  }
+
+  footer {
+    height: auto;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  footer .footer,
+  footer .social-icons {
+    width: 100%;
+    margin-block: 0.8rem;
+  }
+
+  .client1 {
+    width: 90%;
+  }
+
+  #items .card-1,
+  #services .card-2,
+  #more-items .card-3 {
+    width: 90%;
+  }
+}
+
+/* Tablet Devices (min-width: 769px and max-width: 1024px) */
+@media (min-width: 769px) {
+  .nav .logo {
+    width: 50%;
+  }
+
+  .nav ul {
+    gap: 0.8rem;
+  }
+
+  .nav .icons {
+    font-size: 1.5rem;
+  }
+
+  .home h3 {
+    font-size: 3rem;
+  }
+
+  .home h3 span {
+    font-size: 4rem;
+  }
+
+  .home button {
+    margin-block: 4% 8%;
+  }
+
+  #items .card-1,
+  #services .card-2,
+  #more-items .card-3 {
+    width: 48%;
+    margin: 1%;
+  }
+
+  .h1-cont,
+  .h-cont,
+  .more-items-cont {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  footer .footer,
+  footer .social-icons {
+    width: 80%;
+  }
+
+  #clients .client1 {
+    width: 90%;
+  }
+}
+
+/* Large Screens (min-width: 1025px) */
+@media (min-width: 1029px) {
+  /* No major changes needed since your base design is for large screens */
+  .nav-cont {
+    max-width: 80%;
+  }
+
+  .home {
+    max-width: 70%;
+    /* margin-top: 40px; */
+  }
+
+  #items .card-1,
+  #services .card-2,
+  #more-items .card-3 {
+    width: 30%;
+  }
+
+  .more-items-cont {
+    gap: 20px;
+  }
+
+  .h-cont,
+  .h1-cont {
+    gap: 20px;
+  }
 }
